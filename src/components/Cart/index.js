@@ -1,10 +1,7 @@
 import {useContext} from 'react'
-
 import Header from '../Header'
 import CartItem from '../CartItem'
-
-import CartContext from '../../context/CartContext'
-
+import CartContext from '../../context/CartContext' // Update the path
 import './index.css'
 
 const Cart = () => {

@@ -1,7 +1,5 @@
 import {useState, useContext} from 'react'
-
 import CartContext from '../../context/CartContext'
-
 import './index.css'
 
 const DishItem = ({dishDetails}) => {
@@ -21,10 +19,8 @@ const DishItem = ({dishDetails}) => {
   const {addCartItem} = useContext(CartContext)
 
   const onIncreaseQuantity = () => setQuantity(prevState => prevState + 1)
-
   const onDecreaseQuantity = () =>
     setQuantity(prevState => (prevState > 0 ? prevState - 1 : 0))
-
   const onAddItemToCart = () => addCartItem({...dishDetails, quantity})
 
   const renderControllerButton = () => (

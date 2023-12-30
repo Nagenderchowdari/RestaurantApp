@@ -1,8 +1,6 @@
-import {useContext} from 'react'
 import {FaRegTrashAlt} from 'react-icons/fa'
-
-import CartContext from '../../context/CartContext'
-
+import {useContext} from 'react'
+import CartContext from '../../context/CartContext' // Update the path
 import './index.css'
 
 const CartItem = ({cartItemDetails}) => {
@@ -14,6 +12,7 @@ const CartItem = ({cartItemDetails}) => {
     dishCurrency,
     dishPrice,
   } = cartItemDetails
+
   const {
     incrementCartItemQuantity,
     decrementCartItemQuantity,
@@ -21,9 +20,7 @@ const CartItem = ({cartItemDetails}) => {
   } = useContext(CartContext)
 
   const onIncreaseQty = () => incrementCartItemQuantity(dishId)
-
   const onDecreaseQty = () => decrementCartItemQuantity(dishId)
-
   const onRemoveCartItem = () => removeCartItem(dishId)
 
   return (
